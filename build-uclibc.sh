@@ -320,6 +320,9 @@ if [ "x${TLS_SUPPORT}" = "xyes" ]
 then
     ${SED} -e 's@LINUXTHREADS_OLD=y@UCLIBC_HAS_THREADS_NATIVE=y@' \
            -i ${TEMP_DEFCFG}
+else
+    ${SED} -e 's@UCLIBC_HAS_THREADS_NATIVE=y@LINUXTHREADS_OLD=y@' \
+           -i ${TEMP_DEFCFG}
 fi
 
 # Create the .config from the temporary defconfig file.
@@ -451,6 +454,9 @@ fi
 if [ "x${TLS_SUPPORT}" = "xyes" ]
 then
     ${SED} -e 's@LINUXTHREADS_OLD=y@UCLIBC_HAS_THREADS_NATIVE=y@' \
+           -i ${TEMP_DEFCFG}
+else
+    ${SED} -e 's@UCLIBC_HAS_THREADS_NATIVE=y@LINUXTHREADS_OLD=y@' \
            -i ${TEMP_DEFCFG}
 fi
 
