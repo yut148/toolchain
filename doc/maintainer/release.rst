@@ -1,6 +1,6 @@
 .. highlightlang:: shell
 
-Creating Toolchain Release
+Creating Toolchain eelease
 ==========================
 
 
@@ -32,7 +32,7 @@ limited set of files (there is always an option to modify ``release.mk`` to get
 desired results).
 
 
-Building Prerequisites
+Building prerequisites
 ----------------------
 
 Eclipse plugin for ARC
@@ -51,7 +51,7 @@ Create and push respective git tag::
     $ popd
 
 
-Environment Variables
+Environment variables
 ---------------------
 
 Those are make variables which can be set either as a parameters to make, like
